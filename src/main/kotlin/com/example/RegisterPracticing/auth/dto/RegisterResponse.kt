@@ -10,6 +10,8 @@ class RegisterResponse(
 
     val email: String,
 
-    val roleId : Long
+    val roleId : Long,
+
+    val CafteriaId : Long?
 
 )

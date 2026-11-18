@@ -1,5 +1,6 @@
 package com.example.RegisterPracticing.person.entity
 
+import com.example.RegisterPracticing.cafeteria.entity.Cafeteria
 import com.example.RegisterPracticing.role.entity.Role
 import jakarta.persistence.*
 
@@ -31,8 +32,11 @@ class Person(
 
     @ManyToOne
     @JoinColumn(name = "ROLE_ID", nullable = false)
-    private val role : Role
+    private val role : Role,
 
+    @ManyToOne()
+    @JoinColumn(name = "CAFETERIA_ID", nullable = true)
+    val cafeteria: Cafeteria? = null
 
 
 )

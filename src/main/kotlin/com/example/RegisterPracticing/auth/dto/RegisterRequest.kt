@@ -2,6 +2,7 @@ package com.example.RegisterPracticing.auth.dto
 
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Email
+import jakarta.validation.constraints.NotEmpty
 import jakarta.validation.constraints.Pattern
 
 data class RegisterRequest(
@@ -21,6 +22,11 @@ data class RegisterRequest(
     val email : String,
 
     @field:NotBlank
-    val password: String
+    val password: String,
+
+    @field:NotBlank
+    val roleName : String,
+
+    val CafteriaId : Long? = null
 
 )
