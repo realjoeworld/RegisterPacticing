@@ -11,7 +11,6 @@ import jakarta.transaction.Transactional
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
-import java.util.Optional
 
 @Service
 open class AuthService(
@@ -81,5 +80,6 @@ open class AuthService(
         )
 
     }
+
 
 }

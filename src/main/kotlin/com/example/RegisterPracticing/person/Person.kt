@@ -15,15 +15,15 @@ class Person(
 
     @Column(name = "fullName",
         nullable = false)
-    val fullName : String,
+    var fullName : String,
 
     @Column(name = "email",
         nullable = false)
-    val email : String,
+    var email : String,
 
     @Column(name = "phone",
         nullable = false)
-    val phone : String,
+    var phone : String,
 
     @Column(name = "passwordHashed",
         nullable = false)
@@ -32,11 +32,11 @@ class Person(
 
     @ManyToOne
     @JoinColumn(name = "ROLE_ID", nullable = false)
-    private val role : Role,
+    var role : Role,
 
     @ManyToOne()
     @JoinColumn(name = "CAFETERIA_ID", nullable = true)
-    val cafeteria: Cafeteria? = null
+    var cafeteria: Cafeteria? = null
 
 
 )

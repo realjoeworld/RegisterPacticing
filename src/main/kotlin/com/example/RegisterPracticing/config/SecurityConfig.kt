@@ -27,7 +27,7 @@ class SecurityConfig {
                     "/api/auth/register"
                 ).permitAll()
 
-                it.anyRequest().authenticated()
+                it.anyRequest().permitAll()
             }
 
         return http.build()
