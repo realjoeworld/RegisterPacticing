@@ -3,7 +3,6 @@ package com.example.RegisterPracticing.person
 import com.example.RegisterPracticing.role.entity.Role
 
 class PersonRequest(
-    val id : Long,
 
     var fullName : String,
 

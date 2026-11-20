@@ -15,7 +15,6 @@ class PersonService(
    private val personRepository: PersonRepository,
    private val roleRepository: RoleRepository,
    private val cafeteriaRepository: CafeteriaRepository
-
 ) {
 
     fun getAllPeople(): List<PersonResponse> {
@@ -63,6 +62,7 @@ class PersonService(
     @Transactional
     fun updatePerson(id : Long, updatedPerson: PersonRequest) : PersonResponse {
 
+
         val personMustBeUpdated = personRepository.findByIdOrNull(id) ?:
             throw ResourceNotFoundException("Person With Id: ${id} not found")
 
@@ -75,7 +75,6 @@ class PersonService(
             cafeteria  = cafeteriaRepository.findByIdOrNull(updatedPerson.cafeteriaId) ?:
                     throw ResourceNotFoundException("Cafeteria With Id: ${updatedPerson.cafeteriaId} not found")
         }
-
 
 
             personMustBeUpdated.fullName = updatedPerson.fullName
@@ -96,9 +95,6 @@ class PersonService(
                 role = savedPerson.role
             )
 
-
     }
-
-
 
 }
